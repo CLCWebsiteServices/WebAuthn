@@ -100,7 +100,7 @@ abstract class FormatBase {
                 if (\is_array($certInfo) && \is_array($certInfo['issuer']) && \is_array($certInfo['subject'])) {
                     $selfSigned = true;
                     foreach ($certInfo['issuer'] as $k => $v) {
-                        if (!isset($certInfo['subject'][$k])
+                        if (!isset($certInfo['subject'][$k]))
                             continue;
                             
                         if ($certInfo['subject'][$k] !== $v) {

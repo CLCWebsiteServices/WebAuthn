@@ -96,7 +96,7 @@ class AttestationObject {
                     $issuerSubs[] = \trim($certInfo['issuer']['OU']);
                 }
                 if (count($issuerSubs) > 0) {
-                    $issuerSubsStr = implode($issuerSubs, ' ');
+                    $issuerSubsStr = implode(' ', $issuerSubs);
                     if ($issuer) {
                         $issuer .= ' (' . $issuerSubsStr . ')';
                     } else {
@@ -130,7 +130,7 @@ class AttestationObject {
                     $subjectSubs[] = \trim($certInfo['subject']['OU']);
                 }
                 if (count($subjectSubs) > 0) {
-                    $subjectSubsStr = implode($subjectSubs, ' ');
+                    $subjectSubsStr = implode(' ', $subjectSubs);
                     if ($subject) {
                         $subject .= ' (' . $subjectSubsStr . ')';
                     } else {

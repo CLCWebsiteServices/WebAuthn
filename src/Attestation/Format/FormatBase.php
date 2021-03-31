@@ -1,9 +1,9 @@
 <?php
 
+namespace WebAuthn\Attestation\Format;
 
-namespace lbuchs\WebAuthn\Attestation\Format;
-use lbuchs\WebAuthn\WebAuthnException;
-use lbuchs\WebAuthn\Attestation\AuthenticatorData;
+use WebAuthn\WebAuthnException;
+use WebAuthn\Attestation\AuthenticatorData;
 
 
 abstract class FormatBase {

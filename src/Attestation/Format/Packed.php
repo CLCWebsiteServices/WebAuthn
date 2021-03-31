@@ -1,10 +1,10 @@
 <?php
 
+namespace WebAuthn\Attestation\Format;
 
-namespace lbuchs\WebAuthn\Attestation\Format;
-use lbuchs\WebAuthn\Attestation\AuthenticatorData;
-use lbuchs\WebAuthn\WebAuthnException;
-use lbuchs\WebAuthn\Binary\ByteBuffer;
+use WebAuthn\Attestation\AuthenticatorData;
+use WebAuthn\WebAuthnException;
+use WebAuthn\Binary\ByteBuffer;
 
 class Packed extends FormatBase {
     private $_alg;

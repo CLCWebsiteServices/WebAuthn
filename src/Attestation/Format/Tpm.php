@@ -1,10 +1,10 @@
 <?php
 
 
-namespace lbuchs\WebAuthn\Attestation\Format;
-use lbuchs\WebAuthn\Attestation\AuthenticatorData;
-use lbuchs\WebAuthn\WebAuthnException;
-use lbuchs\WebAuthn\Binary\ByteBuffer;
+namespace WebAuthn\Attestation\Format;
+use WebAuthn\Attestation\AuthenticatorData;
+use WebAuthn\WebAuthnException;
+use WebAuthn\Binary\ByteBuffer;
 
 class Tpm extends FormatBase {
     private $_TPM_GENERATED_VALUE = "\xFF\x54\x43\x47";

@@ -92,7 +92,7 @@ class AttestationObject {
                 if (isset($certInfo['issuer']['O'])) {
                     $issuerSubs[] = \trim($certInfo['issuer']['O']);
                 }
-                if (isset($certInfo['subject']['OU'])) {
+                if (isset($certInfo['issuer']['OU'])) {
                     $issuerSubs[] = \trim($certInfo['issuer']['OU']);
                 }
                 if (count($issuerSubs) > 0) {

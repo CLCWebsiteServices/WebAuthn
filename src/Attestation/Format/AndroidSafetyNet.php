@@ -87,6 +87,11 @@ class AndroidSafetyNet extends FormatBase {
     public function validateAttestation($clientDataHash) {
         $publicKey = \openssl_pkey_get_public($this->getCertificatePem());
 
+        // Check whether nonce exists (emulators don't provide this)
+        if (!isset($this->_payload->nonce)) {
+            throw new WebAuthnException('Nonce valued not provided.', WebAuthnException::INVALID_DATA);
+        }
+        
         // Verify that the nonce in the response is identical to the Base64 encoding
         // of the SHA-256 hash of the concatenation of authenticatorData and clientDataHash.
         if (!$this->_payload->nonce || $this->_payload->nonce !== \base64_encode(\hash('SHA256', $this->_authenticatorData->getBinary() . $clientDataHash, true))) {
